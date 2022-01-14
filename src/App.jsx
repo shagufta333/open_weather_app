@@ -19,10 +19,11 @@ class App extends Component {
       ${longitude}&units=metric&appid=cd05093b096364f3844f82d91da92255`);
 
       let weatherInfo = {
-        city: locationResponse.data.results[0].components.postal_city,
+        city: locationResponse.data.results[0].components.country,
         temp: weatherResponse.data.current.temp,
+        description: weatherResponse.data.current.weather[0].description,
       };
-      debugger;
+       debugger;
       this.setState({ location: weatherInfo });
       
     });
@@ -33,9 +34,10 @@ class App extends Component {
   render() {
     return (
       <div data-cy="weather-display">
+        <h3>Today's temprature</h3>
         <div data-cy="temp">{this.state.location?.temp}</div>
-        <div data-cy="location">{this.state.location?.postal_city}</div>
-        <div data-cy="description">cloudy</div>
+        <div data-cy="location">{this.state.location?.country}</div>
+        <div data-cy="description">{this.state.location?.description}</div>
       </div>
     );
   }

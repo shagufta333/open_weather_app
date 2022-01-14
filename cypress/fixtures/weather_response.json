@@ -7,7 +7,7 @@
     "dt": 1637868279,
     "sunrise": 1637823931,
     "sunset": 1637851756,
-    "temp": 2.2,
+    "temp": 3.2 ,
     "feels_like": 1.16,
     "pressure": 998,
     "humidity": 87,
@@ -22,7 +22,7 @@
       {
         "id": 801,
         "main": "Clouds",
-        "description": "few clouds",
+        "description": "cloudy",
         "icon": "02n"
       }
     ]
